@@ -19,6 +19,11 @@
             <sam_layerednavigation>
                 <class>SaM_LayeredNavigation_Block</class>
             </sam_layerednavigation>
+            <catalog>
+                <rewrite>
+                    <layer_filter_price>SaM_LayeredNavigation_Block_Catalog_Layer_Filter_Price</layer_filter_price>
+                </rewrite>
+            </catalog>
         </blocks>
         <helpers>
             <sam_layerednavigation>

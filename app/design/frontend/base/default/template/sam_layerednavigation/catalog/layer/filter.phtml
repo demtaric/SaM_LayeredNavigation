@@ -1,0 +1,37 @@
+<?php
+/**
+ * Template for Price filter items block
+ *
+ * @see SaM_LayeredNavigation_Block_Catalog_Layer_Filter_Price
+ */
+?>
+
+<ol>
+    <?php if(Mage::getStoreConfig('catalog/layered_navigation/link_style') === 'select') : ?>
+        <select onchange="setLocation(this.value);">
+            <?php foreach ($this->getItems() as $_item): ?>
+                <option  value="
+                    <?php if ($_item->getCount() > 0): ?>
+                    <?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getLabel() ?>
+                    <?php else: echo $_item->getLabel() ?>
+                    <?php endif; ?>
+                    <?php if ($this->shouldDisplayProductCount()): ?>
+                        (<?php echo $_item->getCount() ?>)
+                    <?php endif; ?>
+                </option>
+            <?php endforeach ?>
+        </select>
+    <?php else: ?>
+        <?php foreach ($this->getItems() as $_item): ?>
+                <li>
+                    <?php if ($_item->getCount() > 0): ?>
+                        <a href="<?php echo $this->urlEscape($_item->getUrl()) ?>"><?php echo $_item->getLabel() ?></a>
+                    <?php else: echo $_item->getLabel() ?>
+                    <?php endif; ?>
+                    <?php if ($this->shouldDisplayProductCount()): ?>
+                        (<?php echo $_item->getCount() ?>)
+                    <?php endif; ?>
+                </li>
+        <?php endforeach ?>
+    <?php endif; ?>
+</ol>
