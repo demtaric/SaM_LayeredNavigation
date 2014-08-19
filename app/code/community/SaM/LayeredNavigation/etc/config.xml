@@ -33,4 +33,15 @@
             </sam_layerednavigation_setup>
         </resources>
     </global>
+    <adminhtml>
+        <translate>
+            <modules>
+                <sam_layerednavigation>
+                    <files>
+                        <default>SaM_LayeredNavigation.csv</default>
+                    </files>
+                </sam_layerednavigation>
+            </modules>
+        </translate>
+    </adminhtml>
 </config>
