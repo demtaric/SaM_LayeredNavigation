@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <SaM_LayeredNavigation>
+            <version>0.1.0</version>
+        </SaM_LayeredNavigation>
+    </modules>
+    <global>
+        <models>
+            <sam_layerednavigation>
+                <class>SaM_LayeredNavigation_Model</class>
+                <resourceModel>sam_layerednavigation_resource</resourceModel>
+            </sam_layerednavigation>
+            <sam_layerednavigation_resource>
+                <class>SaM_LayeredNavigation_Model_Resource</class>
+            </sam_layerednavigation_resource>
+        </models>
+        <blocks>
+            <sam_layerednavigation>
+                <class>SaM_LayeredNavigation_Block</class>
+            </sam_layerednavigation>
+        </blocks>
+        <helpers>
+            <sam_layerednavigation>
+                <class>SaM_LayeredNavigation_Helper</class>
+            </sam_layerednavigation>
+        </helpers>
+        <resources>
+            <sam_layerednavigation_setup>
+                <setup>
+                    <module>SaM_LayeredNavigation</module>
+                </setup>
+            </sam_layerednavigation_setup>
+        </resources>
+    </global>
+</config>
